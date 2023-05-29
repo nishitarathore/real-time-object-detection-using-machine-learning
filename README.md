@@ -2,17 +2,19 @@
 Master's Project
 
 ### Output :
-![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test.jpg)
 
-![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test2.jpg)
+![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test.jpg)
 
-![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test3.jpg)
+![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test2.jpg)
 
-![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car.jpg)
+![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test3.jpg)
 
-![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car2.jpg)
+![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car.jpg)
 
-![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/numberplate.jpg)
+![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/numberplate.jpg)
+
+![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car2.jpg)
+
 
 ## Getting Started
 ### Conda
@@ -42,6 +44,7 @@ Make sure to use CUDA Toolkit version 10.1 as it is the proper version for the T
 YOLOv4 comes pre-trained and able to detect 80 classes. For easy demo purposes we used the pre-trained weights.
 
 ## Commands:
+
 ```bash
 python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov4 --video_location cars_test.mp4
 
@@ -50,6 +53,7 @@ python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolo
 python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov3 --video_location ./test/video.mp4
 ```
 
+```
 --output ./detections/results.avi
   --video: path to input video (use 0 for webcam)
     (default: './data/video/video.mp4')
@@ -64,8 +68,7 @@ python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolo
  --info: print info on detections
   --model: yolov3 or yolov4
 --framework: what framework to use (tf, trt, tflite)
-
-<a name="counting"/>
+```
 
 ### Counting Objects (total objects or per class)
 I have created a custom function within that can be used to count and keep track of the number of objects detected at a given moment within each image or video. It can be used to count total objects found or can count number of objects detected per class.
@@ -77,8 +80,12 @@ To count the number of objects for each individual class of your object detector
 ### Print Detailed Info About Each Detection (class, confidence, bounding box coordinates)
 I have created a custom flag called <strong>INFO</strong> that can be added to any detect.py or detect_video.py commands in order to print detailed information about each detection made by the object detector. To print the detailed information to your command prompt just add the flag "--info" to any of your commands. The information on each detection includes the class, confidence in the detection and the bounding box coordinates of the detection in xmin, ymin, xmax, ymax format.
 
-
 ### References  
+It is pretty much hard to implement this from the yolov4 and yolov3 paper alone. I had to reference the official (very hard to understand) and many un-official repos to piece together the complete my roject.
 
   * [tensorflow-yolov4-tflite](https://github.com/hunglc007/tensorflow-yolov4-tflite)
+  * YOLOv4: Optimal Speed and Accuracy of Object Detection [YOLOv4](https://arxiv.org/abs/2004.10934).
+  * [darknet](https://github.com/AlexeyAB/darknet)
+  * [Yolov3 tensorflow](https://github.com/YunYang1994/tensorflow-yolov3)
+  * [Yolov3 tf2](https://github.com/zzh8829/yolov3-tf2)
   * [tensorflow-yolov4-tflite](https://github.com/theAIGuysCode/tensorflow-yolov4-tflite)
