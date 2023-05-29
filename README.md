@@ -1,9 +1,21 @@
 # Real-Time-Object-Detection-Using-Machine-Learning
 Master's Project
 
+### Output :
+![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test.jpg)
+
+![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test2.jpg)
+
+![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test3.jpg)
+
+![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car.jpg)
+
+![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car2.jpg)
+
+![](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/numberplate.jpg)
 
 ## Getting Started
-### Conda (Recommended)
+### Conda
 
 ```bash
 # Tensorflow CPU
@@ -25,19 +37,18 @@ pip install -r requirements-gpu.txt
 ```
 ### Nvidia Driver (For GPU, if you are not using Conda Environment and haven't set up CUDA yet)
 Make sure to use CUDA Toolkit version 10.1 as it is the proper version for the TensorFlow version used in this repository.
-https://developer.nvidia.com/cuda-10.1-download-archive-update2
 
 ## Downloading Official Pre-trained Weights
-YOLOv4 comes pre-trained and able to detect 80 classes. For easy demo purposes we will use the pre-trained weights.
+YOLOv4 comes pre-trained and able to detect 80 classes. For easy demo purposes we used the pre-trained weights.
 
-commands:
+## Commands:
+```bash
+python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov4 --video_location cars_test.mp4
 
-==>python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov4 --video_location cars_test.mp4
+python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov4 --video_location 0
 
-==> python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov4 --video_location 0
-
-==> python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov3 --video_location ./test/video.mp4
-
+python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov3 --video_location ./test/video.mp4
+```
 
 --output ./detections/results.avi
   --video: path to input video (use 0 for webcam)
@@ -57,14 +68,7 @@ commands:
 <a name="counting"/>
 
 ### Counting Objects (total objects or per class)
-I have created a custom function within the file [core/functions.py](https://github.com/theAIGuysCode/yolov4-custom-functions/blob/master/core/functions.py) that can be used to count and keep track of the number of objects detected at a given moment within each image or video. It can be used to count total objects found or can count number of objects detected per class.
-
-#### Count Total Objects
-To count total objects all that is needed is to add the custom flag "--count" to your detect.py or detect_video.py command.
-```
-# Run yolov4 model while counting total objects detected
-python detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/dog.jpg --count
-
+I have created a custom function within that can be used to count and keep track of the number of objects detected at a given moment within each image or video. It can be used to count total objects found or can count number of objects detected per class.
 
 
 #### Count Objects Per Class
@@ -72,9 +76,6 @@ To count the number of objects for each individual class of your object detector
 
 ### Print Detailed Info About Each Detection (class, confidence, bounding box coordinates)
 I have created a custom flag called <strong>INFO</strong> that can be added to any detect.py or detect_video.py commands in order to print detailed information about each detection made by the object detector. To print the detailed information to your command prompt just add the flag "--info" to any of your commands. The information on each detection includes the class, confidence in the detection and the bounding box coordinates of the detection in xmin, ymin, xmax, ymax format.
-
-
-
 
 
 ### References  
