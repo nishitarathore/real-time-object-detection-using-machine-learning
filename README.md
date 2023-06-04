@@ -1,4 +1,4 @@
-# Real-Time-Object-Detection-Using-Machine-Learning
+# Real Time Object Detection Using Machine Learning
 Master's Project
 
 ### Output :
