@@ -9,6 +9,8 @@ Master's Project
 
 ![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test3.jpg)
 
+### Case Study : 
+
 ![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car.jpg)
 
 ![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/numberplate.jpg)
@@ -16,15 +18,15 @@ Master's Project
 ![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car2.jpg)
 
 
-## Getting Started
+# Getting Started
 ### Conda
 
 ```bash
-# Tensorflow CPU
+#Tensorflow CPU
 conda env create -f conda-cpu.yml
 conda activate yolov4-cpu
 
-# Tensorflow GPU
+#Tensorflow GPU
 conda env create -f conda-gpu.yml
 conda activate yolov4-gpu
 ```
