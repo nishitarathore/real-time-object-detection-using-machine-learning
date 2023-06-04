@@ -9,7 +9,7 @@ Master's Project
 
 ![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/test3.jpg)
 
-### Case Study : 
+#### Vehicle number plate detection and recognition (Case Study): 
 
 ![image](https://github.com/Shismohammad/Real-Time-Object-Detection-Using-Machine-Learning/blob/master/Images/car.jpg)
 
@@ -39,13 +39,13 @@ pip install -r requirements.txt
 # TensorFlow GPU
 pip install -r requirements-gpu.txt
 ```
-### Nvidia Driver (For GPU, if you are not using Conda Environment and haven't set up CUDA yet)
+#### Nvidia Driver (For GPU, if you are not using Conda Environment and haven't set up CUDA yet)
 Make sure to use CUDA Toolkit version 10.1 as it is the proper version for the TensorFlow version used in this repository.
 
 ## Downloading Official Pre-trained Weights
 YOLOv4 comes pre-trained and able to detect 80 classes. For easy demo purposes we used the pre-trained weights.
 
-## Commands:
+### Commands:
 
 ```bash
 python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolov4 --video_location cars_test.mp4
@@ -72,17 +72,18 @@ python yolo_project.py --weights_location ./weights/yolov4-tiny-416 --model yolo
 --framework: what framework to use (tf, trt, tflite)
 ```
 
-### Counting Objects (total objects or per class)
+#### Counting Objects (total objects or per class)
 I have created a custom function within that can be used to count and keep track of the number of objects detected at a given moment within each image or video. It can be used to count total objects found or can count number of objects detected per class.
 
 
 #### Count Objects Per Class
 To count the number of objects for each individual class of your object detector you need to add the custom flag "--count" as well as change one line in the detect.py or detect_video.py script. By default the count_objects function has a parameter called <strong>by_class</strong> that is set to False. If you change this parameter to <strong>True</strong> it will count per class instead.
 
-### Print Detailed Info About Each Detection (class, confidence, bounding box coordinates)
+#### Print Detailed Info About Each Detection (class, confidence, bounding box coordinates)
 I have created a custom flag called <strong>INFO</strong> that can be added to any detect.py or detect_video.py commands in order to print detailed information about each detection made by the object detector. To print the detailed information to your command prompt just add the flag "--info" to any of your commands. The information on each detection includes the class, confidence in the detection and the bounding box coordinates of the detection in xmin, ymin, xmax, ymax format.
 
-### References  
+### References :
+
 It is pretty much hard to implement this from the yolov4 and yolov3 paper alone. I had to reference the official (very hard to understand) and many un-official repos to piece together the complete my roject.
 
   * [tensorflow-yolov4-tflite](https://github.com/hunglc007/tensorflow-yolov4-tflite)
